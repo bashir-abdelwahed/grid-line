@@ -1,0 +1,149 @@
+#playCanvas,#makeCanvas{
+  position: relative;
+  /*border:1px solid black;*/
+  margin: auto;
+  width: 99%; /*for some reason 95% seems to work the best on mobile*/
+  z-index: 1000;
+  /* to keep the ratio  you should add a padding-top;
+  /* the solution is to add a height and a width in the js file
+    at each game play and remember to add 2 to them */
+}
+#playCanvass{
+  position: relative;
+  border:1px solid black;
+  width: 40%;
+  padding-top: 40%;
+  background: red; /* this keeps the aspect ratio 1:1 */
+  /* the solution is to add a height and a width in the js file
+    at each game play and remember to add 2 to them */
+}
+
+#playCanvas .knote,
+#makeCanvas .knote{
+  outline: 1px solid black;
+  position: absolute;
+  z-index: 1;
+}
+
+#optionsCanvas{
+  margin: auto;
+  width: 98%;
+  height: calc(5.4vw) !important;
+}
+
+#optionsCanvas .knote{
+/*  width: 5.4% !important;
+  height: calc(5.4vw) !important; these settings work well for computers*/
+  width: 66px;
+  height: 66px;
+  outline: 1px solid black;
+  position: relative;
+  display:block;
+  float:left;
+  margin: 0 1px 1px 0px;
+}
+
+.home-pipe {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+  background-image: url(../images/home.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #3461ce;
+  z-index:0;
+}
+.power-pipe{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  /*width: 90%;*/
+  /*height: 60%;*/
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+  background-image: url(../images/power.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #FFCE41;
+  z-index:0;
+}
+
+/*.normal-pipe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #124628;
+  z-index:1;
+}*/
+.center-pipe{
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  width: 40%;
+  height: 40%;
+  background-color: gray;
+  z-index:1;
+  /*background: #f3ecec;*/
+}
+.upper-pipe{
+  position: absolute;
+  left: 33.3333333%;
+  width: 33.3333333%;
+  height: 33.3333333%; /* this is to eliminate the fault in rendering */
+  background-color: gray;
+  z-index:0;
+}
+.right-pipe{
+  position: absolute;
+  right: 0;
+  top: 33.3333333%;
+  width: 33.3333333%;
+  height: 33.3333333%;
+  background-color: gray;
+  z-index:0;
+}
+.left-pipe{
+  position: absolute;
+  top: 33.3333333%;
+  width: 33.3333333%;
+  height: 33.3333333%;
+  background-color: gray;
+  z-index:0;
+}
+.bottom-pipe{
+  position: absolute;
+  left: 33.3333333%;
+  bottom: 0;
+  width:33.3333333%;
+  height: 33.3333333%;
+  background-color: gray;
+  z-index:0;
+}
+.on{
+  -webkit-transition: background-color .5s ease;
+  -moz-transition: background-color .5s ease;
+  -o-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+  background-color: #ddae11 !important;
+  box-shadow: 0 0 10px #bb9c00;
+}
+/*
+.on{
+  background: #ddae11;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse{
+  0%{
+    background-color: #ddae11 ;
+  }
+  100%{ background-color: #BC2F26 ;}
+}
+
+
+*/

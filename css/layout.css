@@ -1,0 +1,116 @@
+
+
+header{
+  padding: 10px 10px 20px;
+  border-bottom:5px solid #444;
+}
+.bg-elec{
+  /*background-image: url('../images/elec.png');*/
+  /*background-repeat: no-repeat;*/
+  /*min-height: 960px;*/
+}
+.dark{
+  background-color: #111;
+}
+.a{
+  display:block;
+  border: 3px black solid;
+  border-radius: 3px;
+  padding: 5px 40px;
+  color:black !important;
+  text-decoration: none;
+  background: #3095D8;
+  width: 50%;
+  margin: 20px auto;
+  text-align:center;
+  box-shadow: 0 0 10px yellow;
+}
+.ui-page-theme-a{
+  text-shadow: none;
+}
+
+.levels{
+  display: inline-block;
+  text-decoration: none;
+  width: 10%;
+  height: 10vw;
+  padding: 2vw;
+  color: white !important;
+}
+
+.levels div{
+  background: #592395;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.levels span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.back{
+  width: 20%;
+  margin: 0;
+}
+
+
+#puzzle .back{
+  width: auto;
+}
+
+p{
+  text-align: center;
+}
+
+.nxt{
+  display:block;
+  border: 1px black solid;
+  border-radius: 3px;
+  padding: 5px 40px;
+  color:black !important;
+  text-decoration: none;
+  margin: 20px auto;
+  text-align:center;
+  background-color: #4b3be6;
+}
+/*#puzzle .next-level{
+  background-color: #f6f6f6 ;
+  color: #333333 ;
+  box-shadow: #d3d3d3 0px 1px 0px ;
+  border-color: #dddddd ;
+  text-shadow: none ;
+  width: auto;
+}
+*/
+
+
+/*#puzzle .next-level:focus{
+  background-color: #f6f6f6;
+  color: #333333 ;
+  box-shadow: #d3d3d3 0px 1px 0px ;
+  border-color: #dddddd ;
+  font-weight: 700;
+}*/
+
+#puzzle .press-me{
+  background: #ddae11 ;
+  /*//////box-shadow: #BC2F26 0px 3px 0px;*/
+  color: white;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse{
+  0%{
+    /*box-shadow: #BC2F26 0px 3px 0px;*/
+    /*background-color: #ddae11 ;*/
+    background-color: #ff420e;
+  }
+  100%{
+    /*box-shadow: #ddae11 0px 3px 0px;*/
+    /*background-color: #BC2F26;*/
+    background-color: #80bd9e;
+  }
+}

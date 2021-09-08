@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <title>Pipe Me</title>
+  <link rel='stylesheet' href='css/index.css' />
+  <link rel='stylesheet' href='css/jquery.mobile.css' />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel='stylesheet' href='css/layout.css' />
+  <script src="lib/jquery.js"></script>
+  <script src='lib/jquery.mobile.js'></script>
+</head>
+
+<body>
+
+
+
+<div data-role='page' id='main'>
+  <div data-role='header' >
+    <h1>GRID SYSTEM</h1>
+  </div>
+
+  <div role='main' class='ui-content bg-elec'>
+    <img  src='images/good.png' alt='light bulb' style='display: block;margin:0 auto;'/>
+    <a href='#' class='a'  onclick='load_navigate("#puzzles",levels)' > START </a>
+    <a href='#options' class='a' > OPTIONS </a>
+    <a href='#credits' class='a' > CREDITS </a>
+    <a href='#make' class='a' > MAKE PUZZLE </a>
+    <a href='#' class='a exit'  onclick='navigator.app.exitApp ();'> EXIT </a>
+  </div>
+
+
+</div>
+
+<div data-role='page' id='puzzles'>
+  <div data-role='header'>
+    <a href='#main'>Back</a>
+    <h1>GRID SYSTEM</h1>
+  </div>
+
+  <div role='main' class='ui-content bg-elec'>
+    <img  src='images/good.png' alt='light bulb' style='display: block;margin:0 auto;'/>
+    <hr / />
+    <p>
+      CHOOSE PUZZLE SIZE
+    </p>
+    <hr />
+  </div>
+
+</div>
+
+
+
+<div data-role='page' id='puzzle'>
+
+  <div data-role='header'>
+    <a href='#main' class='back'>Back</a>
+    <h1>GRID SYSTEM</h1>
+    <a href='#puzzle' class='next-level'>
+
+    </a>
+  </div>
+
+  <div role='main' class='ui-content' style='padding-left:0; padding-right:0;'>
+    <div class='container'>
+      <div id='playCanvas' onshow=''>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-role='page' id='options'>
+  <div data-role='header'>
+    <a href='#main'>Back</a>
+    <h1>GRID SYSTEM</h1>
+  </div>
+
+  <div role='main' class='ui-content '>
+    <img  src='images/good.png' alt='light bulb' style='display: block;margin:0 auto;'/>
+    <form>
+        <label>
+            <input
+              name="checkbox-0 "
+              type="checkbox"
+              id='isSnd'
+              checked
+              onclick="options.toggle_snd()"
+            > SOUND
+        </label>
+        <!-- <label>
+            <input
+              name="checkbox-0 "
+              type="checkbox"
+              id='isNight'
+              onclick="options.toggle_night()"
+            > NIGHT MODE
+        </label> -->
+    </form>
+  </div>
+</div>
+
+
+<div data-role='page' id='credits'>
+  <div data-role='header'>
+    <a href='#main'>Back</a>
+    <h1>GRID SYSTEM</h1>
+  </div>
+
+  <div role='main' class='ui-content bg-elec'>
+    <img  src='images/good.png' alt='light bulb' style='display: block;margin:0 auto;'/>
+    <p>
+      This game was created by Bashir Abdelwahed as part of a fun project.
+    </p>
+    <p>
+      contact me @ ing.bashir.abdelwahed@hotmail.com/gmail.com.
+    </p>
+  </div>
+</div>
+
+<div data-role='page' id='connection'>
+  <div data-role='header'>
+    <a href='#main' > BACK </a>
+    <h1>GRID SYSTEM</h1>
+  </div>
+
+  <div role='main' class='ui-content'>
+    <!-- <img  src='images/good.png' alt='light bulb' style='display: block;margin:0 auto;'/> -->
+
+    <img  src='images/connection.png' alt='light bulb' style='display: block;margin:0 auto;width: 100%;height: auto;'/>
+    <p style='text-align:center;'>
+      CONNECT TO THE INTERNET AND ENJOY THE GAME &lt;3
+    </p>
+  </div>
+
+
+</div>
+
+<div data-role='page' id='make'>
+  <div data-role='header'>
+    <a href='#main' onclick="$('#makeCanvas').html('')">Back</a>
+    <h1 class='lebnen'>Head</h1>
+  </div>
+
+  <div role='main' class='ui-content'>
+
+
+    <button onclick='make_choose_size()'> NEW </button>
+    <button onclick='repair()'> Repair </button>
+     <!--<label for="make_vNum">Vertical pieces</label>
+    <input type='number' name='yNum' id='make_vNum' min='5' max='9' /> -->
+    <label for="make_hNum">horizontal pieces</label>
+    <input type='number' name='xNum' id='make_hNum' min='5' max='9' />
+    <label for="make_index"> Index in the database </label>
+    <input type='number' name='index' id='make_index' min='1' max='100'/>
+
+    <div id='makeCanvas'>
+
+    </div>
+    <button onclick='push_to_database()'> Push to database </button>
+    <div id='optionsCanvas'>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+<script src='js/index.js'></script>
+
+<script src='js/knote-class.js'></script>
+
+<script src='js/grid-class.js'></script>
+
+<script src='js/setting-class.js'></script>
+
+<script src="js/plugins.js"></script>
+
+<script src="js/make.js"></script>
+
+<script src='js/puzzles.js'></script>
+
+<script src='js/db.js'></script>
+
+<script src='js/handlers.js'></script>
+
+<script src='js/admob.js'></script>
+</body>
+</html>
+
+
+
+
+
+<!-- <div>
+  <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>Horizontal:</legend>
+      <input name="radio-choice-h-2" id="radio-choice-h-5x5" value="5" checked type="radio" class='radio'>
+      <label for="radio-choice-h-5x5">5x5</label>
+      <input name="radio-choice-h-2" id="radio-choice-h-6x6" value="6" type="radio" class='radio'>
+      <label for="radio-choice-h-6x6">6x6</label>
+      <input name="radio-choice-h-2" id="radio-choice-h-7x7" value="7" type="radio" class='radio'>
+      <label for="radio-choice-h-7x7">7x7</label>
+      <input name="radio-choice-h-2" id="radio-choice-h-8x8" value="8" type="radio" class='radio'>
+      <label for="radio-choice-h-8x8">8x8</label>
+      <input name="radio-choice-h-2" id="radio-choice-h-9x9" value="9" type="radio" class='radio'>
+      <label for="radio-choice-h-9x9">9x9</label>
+      <button onclick='make_choose_size()'> OK </button>
+  </fieldset>
+</div> -->
+
+
+
+<!-- <icon density="ldpi" src="res/icon/android/ldpi.png" />
+<icon density="mdpi" src="res/icon/android/mdpi.png" />
+<icon density="hdpi" src="res/icon/android/hdpi.png" />
+<icon density="xdpi" src="res/icon/android/xdpi.png" /> -->
