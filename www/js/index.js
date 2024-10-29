@@ -37,6 +37,24 @@
    });
    setTimeout(navigator.app.exitApp(), 3000);
  }
+
+// Authenticate user (example with Google provider)
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var uid = user.uid;
+    console.log("User UID: ", uid);
+  } else {
+    // No user is signed in, proceed with sign-in
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      console.log("User signed in");
+    }).catch(function(error) {
+      console.error("Error signing in: ", error);
+    });
+  }
+});
+
  var database = firebase.database();
  var connected;
 
