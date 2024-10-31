@@ -11,6 +11,8 @@ The game's goal is to connect the gird lines to form a complete path linking the
 
 | This game is a POC and not intended for production use.
 
+You need to have access to the internet to play this game. It contains a page to create new puzzles but you need to be registered to use it.
+
 # Install & Run
 ```
 # install npm
